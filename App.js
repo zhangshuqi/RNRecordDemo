@@ -52,8 +52,11 @@ const App: () => React$Node = () => {
                             }}>Step One</Text>
                             <Text style={styles.sectionDescription}  onPress={() => {
                                 alert('setRecordFilePath2222');
-                                DeviceEventEmitter.addListener('onCallFinish',
-                                    (events) =>{  alert('onCallFinish');});
+                               // console.log('onCallFinish');
+                                 DeviceEventEmitter.addListener('onCallFinish',
+                                    (events) =>{
+                                      //  emitterSubscription.remove()
+                                    console.log('onCallFinish');});
                                  NativeModules.RecordModule.getPhoneDeviceName().then((deviceName)=>{
                                      alert(deviceName);
 

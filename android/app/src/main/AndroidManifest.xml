@@ -30,10 +30,8 @@
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 
         <receiver
-            android:name=".PhoneReceiver"
-            android:enabled="true"
-            android:process=":PhoneListenService">
-            <intent-filter android:priority="999">
+            android:name=".PhoneReceiver">
+            <intent-filter >
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
                 <action android:name="android.intent.action.PHONE_STATE" />
 

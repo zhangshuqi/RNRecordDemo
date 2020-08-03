@@ -70,8 +70,9 @@ public class RecordManager {
         if (file.exists()) {
             File[] files = file.listFiles();
             for (File file1 : files) {
-                filePathList.add(file.getAbsolutePath());
-                Log.d("tank", file1.getName());
+                if (file1.isFile()) {
+                    filePathList.add(file.getAbsolutePath());
+                }
             }
         }
         return filePathList;

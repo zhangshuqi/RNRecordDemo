@@ -22,7 +22,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 
 public class RecordModule extends ReactContextBaseJavaModule {
-    public ReactApplicationContext reactContext;
+    public  static ReactApplicationContext reactContext;
 
     public RecordModule(ReactApplicationContext reactContext) {
         this.reactContext = reactContext;
@@ -88,7 +88,7 @@ public class RecordModule extends ReactContextBaseJavaModule {
             deviceName = manufacturer + "_miui" + getPhoneDeviceName("ro.miui.ui.version.name").toUpperCase();
         }
         promise.resolve(deviceName);
-        sendEvent(reactContext, "onCallFinish", "");
+       // sendEvent(reactContext, "onCallFinish", "");
 
     }
 

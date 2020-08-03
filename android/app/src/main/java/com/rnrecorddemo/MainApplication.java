@@ -2,12 +2,14 @@ package com.rnrecorddemo;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.ReactContext;
 import com.facebook.soloader.SoLoader;
 
 import java.lang.reflect.InvocationTargetException;
@@ -56,8 +58,7 @@ public class MainApplication extends Application implements ReactApplication {
      * @param context
      * @param reactInstanceManager
      */
-    private static void initializeFlipper(
-            Context context, ReactInstanceManager reactInstanceManager) {
+    private static void initializeFlipper(Context context, ReactInstanceManager reactInstanceManager) {
         if (BuildConfig.DEBUG) {
             try {
         /*
