@@ -52,9 +52,9 @@ public class RecordModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void getRecordFileList(Promise promise) {
 
-        List<String> recodeFileList = RecordManager.getInstance().getRecodeFileList(reactContext);
+        RecordManager.getInstance().getRecodeFileList(reactContext,promise);
 
-        promise.resolve(JSON.toJSONString(recodeFileList));
+
     }
 
     /**
